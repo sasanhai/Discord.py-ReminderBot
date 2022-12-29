@@ -13,15 +13,15 @@ async def on_ready():
     print('BOT IS NOW ON')
 
     channels = {
-        '1057663256761737306': {
+        'channel_1': {
             'messages': ['Hello!', 'How are you?', 'What is your favorite color?', 'Do you like to code?'],
             'delay': (10, 20)  # Minimum and maximum delay in seconds
         },
-        '1057663286272856216': {
+        'channel_2': {
             'messages': ['Hi there!', 'What do you like to do in your free time?', 'Do you have any pets?'],
             'delay': (10, 20)  # Minimum and maximum delay in seconds
         },
-        '1057663337581776936': {
+        'channel_3': {
             'messages': ['Good morning!', 'What did you have for breakfast?', 'Do you have any hobbies?'],
             'delay': (3, 5)  # Minimum and maximum delay in seconds
         }
@@ -33,4 +33,4 @@ async def on_ready():
             await channel.send(message)
             await asyncio.sleep(random.randint(*channel_data['delay']))
 
-client.run('TOKEN')
+client.run('YOUR_BOT_TOKEN_HERE')
